@@ -8,7 +8,7 @@ image: ""
 tags: []
 private: false
 ---
-Do you want to share your code to other developers but you don’t know how? In the open-source community there are some approaches that you have to be familiar with. You cannot just push your code to a repository and wait for somebody to use it. You have to go through several steps before your project will be noticed by other people.
+Do you want to share your code with other developers but you don’t know how? In the open-source community, there are some approaches that you have to be familiar with. You cannot just push your code to a repository and wait for somebody will use it. You have to go through several steps before your project will be noticed by other people.
 
 <!--more-->
 
@@ -21,21 +21,23 @@ Why on GitHub? GitHub is a de facto standard for open-source projects. You share
 ---
 
 ## Step 0: Find an Idea
-If you already have an idea for your project then you're in luck but if you don’t you have to start from looking for the idea.
+If you already have an idea for your project then you're in luck but if you don’t you have to start by looking for the idea.
 
-The best open-source project is a project that you make for yourself then share to other people. Analyze your daily habits and investigate what kind of tool you aren’t enough in your day to day life.
+The best open-source project is a project that you make for yourself then share with other people. Analyze your daily habits and investigate what kind of tool you lack in your day-to-day life.
+
+In the worst case use an idea generator, [this one](https://ideasai.net/) for example.
 
 ## Step 1: Choose a Technology Stack
-**For a long-term project**, it’s better to apply the technology stack that you are already familiar with.
+**For a long-term project**, it’s better to apply the technology stack such you are already familiar with.
 
-Why is the familiar technology stack? Because when you use unknown technology you can spend too much time learning this new technology that may cause you to lose motivation or to meet a problem that you won’t be able to solve. But if you are confident about your abilities, you can apply unfamiliar technology for a long-term project.
+_Why is the familiar technology stack?_ Because when you use unknown technology you can spend too much time learning new technology. This could cause you to lose motivation or to meet a problem that you won’t be able to solve. But if you are confident about your abilities, you can apply unfamiliar technology for a long-term project.
 
-**For a short-term project**, choose any technology that you want. You can even change the stack at any time and completely rewrite the project if the technology doesn’t suit you.
+**For a short-term project**, choose any technology that you want. You can even change the stack at any time and rewrite the project completely if the technology doesn’t suit you.
 
 ## Step 2: Write Readme and License Files
-Okay, you have found an idea and have chosen your favorite technology stack. Now, you can set up a new repository for your project on GitHub.
+Okay, you have found an idea and have chosen your favorite technology stack. Now, you can [set up a new repository](https://docs.github.com/en/github/getting-started-with-github/create-a-repo) for your project on GitHub.
 
-It is time to talk about two main files inside your repository — readme, and license.
+It is time to talk about two main files inside your repository — [readme](https://www.makeareadme.com/), and [license](https://choosealicense.com/).
 
 Your open-source project has to have a readme file that contains information about the app. The readme file should consist of three sections at least:
 1. A detailed description of your app and what the app can do, as well as its goals. This allows you and other people to know what the app is for.
@@ -47,10 +49,13 @@ What about the license? I always choose the MIT license for all my open-source p
 Also, it will be convenient to have `.gitignore` file for the app’s sources because you won’t commit unnecessary files accidentally.
 
 ## Step 3: Create a Simple Working Version of the App
-Unless you have any code for your app you can create a minimal working version. The code has to compile successfully but it can do nothing useful. It could be a blank page with your name, or simple CLI command, or bot that greets you. Working code is required for configuration of a development environment on GitHub.
+Unless you have any code for your create a minimal working version. The code has to compile successfully but it can do nothing useful. It could be a blank page with your name, or simple CLI command, or a bot that greets you. Working code is required to configure continuous integration tool on GitHub.
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Continuous_integration):
+> Continuous integration—the practice of frequently integrating one's new or changed code with the existing code repository — should occur frequently enough that no intervening window remains between commit and build, and such that no errors can arise without developers noticing them and correcting them immediately. Normal practice is to trigger these builds by every commit to a repository, rather than a periodically scheduled build.
 
 ## Step 4: Automate Building of the App
-GitHub Actions is a CI tool that allows you to execute a build script for your app automatically after occurance of some events in your repository. 
+[GitHub Actions](https://github.com/features/actions) is a CI tool that allows you to execute a build script for your app automatically after occurance of some events in your repository. At the moment we interested in three types of repository events: pushing a new commit to main branch, creating a pull request, creating a new release.
 
 The build script has to have two checks at least :
 * Building — the most important check that verifies the source code on syntax errors
@@ -62,10 +67,6 @@ If you want more reliability, you can set up yet another two checks:
 
 If one of the checks fails then GitHub Actions will inform you about that. In case of fail ...
 
-At the moment we interested in three types of repository events:
-1. pushing a new commit to main branch
-2. creating a pull request
-3. creating a new release
 
 GitHub already has GitHub Actions templates for different languages. Your task is to follow the wizard’s suggestion for your language and do small changes if you need it.
 
