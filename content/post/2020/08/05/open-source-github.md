@@ -16,7 +16,7 @@ Why on GitHub? GitHub is a de facto standard for open-source projects. You share
 
 ---
 
-**Disclaimer:** I cannot write about everything in detail because there is too much information. I will write only about basic concepts. I will give you links to documentation by the way for further learning.
+**Disclaimer:** I cannot write about everything in detail because there is too much information. I will write only about basic concepts and give you links to documentation for further learning by the way.
 
 ---
 
